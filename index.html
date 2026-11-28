@@ -14,7 +14,7 @@
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
 body{margin:0;min-height:100vh;color:var(--ink);background:var(--bg1);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Inter,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.011em}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(60% 40% at 15% 8%,rgba(230,196,106,.55),transparent 70%),radial-gradient(50% 40% at 90% 25%,rgba(52,199,89,.38),transparent 70%),radial-gradient(60% 45% at 30% 95%,rgba(10,132,255,.28),transparent 70%)}
+body::before{content:"";position:fixed;top:0;right:0;bottom:0;left:0;z-index:-1;background:radial-gradient(60% 40% at 15% 8%,rgba(230,196,106,.55),transparent 70%),radial-gradient(50% 40% at 90% 25%,rgba(52,199,89,.38),transparent 70%),radial-gradient(60% 45% at 30% 95%,rgba(10,132,255,.28),transparent 70%)}
 main{max-width:480px;margin:0 auto;padding:18px 16px 40px}
 .glass{background:var(--glass);-webkit-backdrop-filter:blur(28px) saturate(190%);backdrop-filter:blur(28px) saturate(190%);border:1px solid var(--glass-b);border-radius:26px;box-shadow:inset 0 1.5px 0 var(--hi),inset 0 -1px 0 rgba(255,255,255,.12),0 10px 34px rgba(20,20,40,.12)}
 .mission{position:absolute;top:12px;right:12px;width:62px;height:62px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}.hero{position:relative;text-align:center;padding:26px 20px 22px;margin-bottom:14px}
@@ -88,7 +88,7 @@ body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,
 .pm-trk{position:relative;height:34px;margin-top:5px}.pm-zb,.pm-fb{position:absolute;top:10px;height:14px;border-radius:7px}
 .pm-zb{left:0;right:0;background:linear-gradient(90deg,rgba(255,90,79,.4) 0 31%,rgba(230,196,106,.5) 31% 67%,rgba(52,199,89,.4) 67% 100%)}
 .pm-fb{left:0;background:var(--zf);width:calc(17px + (100% - 34px) * var(--r,0));transition:background .4s}
-#pmS{position:absolute;inset:0;width:100%;height:34px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer;touch-action:pan-y}
+#pmS{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:34px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer;touch-action:pan-y}
 #pmS::-webkit-slider-runnable-track{background:transparent;height:34px}#pmS::-moz-range-track{background:transparent;height:34px}
 #pmS::-webkit-slider-thumb{-webkit-appearance:none;box-sizing:border-box;width:34px;height:34px;border-radius:50%;background:#fff;border:7px solid var(--zd);box-shadow:0 3px 10px rgba(0,0,0,.35)}
 #pmS::-moz-range-thumb{box-sizing:border-box;width:34px;height:34px;border-radius:50%;background:#fff;border:7px solid var(--zd);box-shadow:0 3px 10px rgba(0,0,0,.35)}
@@ -110,8 +110,22 @@ body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,
 .foot a{color:inherit;text-decoration:underline}.foot b{color:var(--ink);letter-spacing:.03em}
 .stp{display:block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--goldt);margin-bottom:2px}.know h3{font-size:14.5px;margin:14px 0 6px;color:var(--goldt)}.know ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14px;line-height:1.5}.know p{margin:0;font-size:14px;line-height:1.5}.know a{color:var(--goldt);font-weight:700}
 .aud-tag{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--goldt);margin:0 0 4px}.aud-sub{margin:4px 0 4px;font-size:15px;line-height:1.45;color:var(--mute)}.au{margin-top:12px;padding:14px;border-radius:18px;background:var(--fill)}.au-h{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.au b{font-size:15.5px;line-height:1.35}.lang{flex:none;font-size:11.5px;font-weight:800;padding:4px 11px;border-radius:99px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1d00}.au audio{display:block;width:100%;height:44px}.au small{display:block;margin-top:7px;font-size:12.5px;color:var(--mute)}
-.dis{display:grid;grid-template-columns:30px 1fr;gap:12px;margin-top:16px;padding:14px;border-radius:14px;background:rgba(10,132,255,.1);border:1.5px solid rgba(10,132,255,.55)}.dis i{width:28px;height:28px;border-radius:50%;background:#0A60C8;color:#fff;font-style:normal;font-weight:800;font-size:16px;line-height:28px;text-align:center}.dis b{display:block;font-size:15.5px;margin-bottom:3px;color:#0A5FB4}.pitch .dis p{margin:0;font-size:14px;line-height:1.5;color:var(--ink)}
+.dis{display:grid;grid-template-columns:30px 1fr;gap:12px;margin-top:16px;padding:14px;border-radius:14px;background:rgba(10,132,255,.1);border:1.5px solid rgba(10,132,255,.55)}.dis i{width:28px;height:28px;border-radius:50%;background:#0A60C8;color:#fff;font-style:normal;font-weight:800;font-size:16px;line-height:28px;text-align:center}.dis b{display:block;font-size:15.5px;margin-bottom:3px;color:#0A5FB4}.dis p{margin:0;font-size:14px;line-height:1.5;color:var(--ink)}
 @media (prefers-color-scheme:dark){.dis b{color:#7DBBFF}}
+.up{margin-top:16px;padding:16px;border-radius:18px;border:1.5px solid var(--gold);background:linear-gradient(135deg,rgba(230,196,106,.22),rgba(230,196,106,.06))}
+.up-badge{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1d00}
+.up-t{display:block;margin:8px 0 4px;font-size:17px;line-height:1.3}.up-p{margin:0;font-size:13.5px;line-height:1.5;color:var(--mute)}
+.up-pr{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:12px 0 4px}.up-pr s{color:var(--mute);font-size:15px}.up-pr strong{font-size:28px;letter-spacing:-.02em}.up-pr span{font-size:13px;font-weight:700;color:var(--okt)}
+.up-q{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:10px}.up-q output{min-width:34px;text-align:center;font-size:26px;font-weight:800}.up-m{font-size:12.5px;color:var(--mute);margin-left:auto}
+.up-b{width:44px;height:44px;border-radius:50%;border:0;background:var(--fill);color:var(--ink);font:inherit;font-size:24px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center}.up-b:disabled{opacity:.35;cursor:not-allowed}
+.up-all{margin-top:10px;width:100%;border:1.5px solid var(--gold);background:transparent;color:var(--goldt);font:inherit;font-weight:700;font-size:15px;border-radius:12px;padding:12px;cursor:pointer}.up-all[hidden]{display:none}
+.up-tot{margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--fill);font-size:13.5px;line-height:1.55}.up-tot b{font-size:15.5px}
+@media (hover:hover){.up-b:not(:disabled):hover,.up-all:hover{filter:brightness(1.1)}}
+.up-pay{margin:10px 0 0;font-size:13px;line-height:1.55;color:var(--mute)}.up-pay b,.up-pay strong{color:var(--ink)}
+.dis ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}.dis li{position:relative;padding-left:16px;font-size:13.5px;line-height:1.5;color:var(--ink)}.dis li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:#0A60C8}.dis li strong{color:var(--ink)}
+.hl{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--mute)}.hl button{border:0;border-radius:99px;padding:8px 16px;font:inherit;font-weight:700;font-size:13px;background:var(--fill);color:var(--ink);cursor:pointer}
+@media (min-width:1024px){.colB{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow-y:auto;scrollbar-width:thin;padding:0 4px 8px 0}}
+.opt.on{border-color:var(--gold);background:rgba(230,196,106,.22)}.opt.off{opacity:.55;cursor:not-allowed}a,button,label,select,summary{touch-action:manipulation}
 </style>
 </head>
 <body>
@@ -131,15 +145,10 @@ body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,
     <div class="prop"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M18 17l.7 1.8L20.5 19.5l-1.8.7L18 22l-.7-1.8-1.8-.7 1.8-.7z"/></svg>Gentle on paint</div>
     <div class="prop"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.7"/><circle cx="17" cy="17.5" r="1.7"/></svg>Doorstep delivery</div>
   </div>
+<div class="hl"><span>Prefer to listen?</span><button type="button">English</button><button type="button" lang="ta">தமிழ்</button></div>
 </header>
 
-<section class="glass aud">
-  <p class="aud-tag">Prefer to listen?</p>
-  <h2>Hear how waterless car cleaning works</h2>
-  <p class="aud-sub">Choose your language and press play. Listen while you are on the go, then register with confidence.</p>
-  <div class="au"><div class="au-h"><b>Waterless car cleaning explained</b><span class="lang">ENGLISH</span></div><audio controls preload="none" controlsList="nodownload noplaybackrate" aria-label="Waterless car cleaning explained in English" src="audio-english.m4a"></audio><small>Audio guide, about 18 minutes</small></div>
-  <div class="au"><div class="au-h"><b lang="ta">தண்ணீர் இல்லாமல் கார் சுத்தம் செய்யும் முறை</b><span class="lang" lang="ta">தமிழ்</span></div><audio controls preload="none" controlsList="nodownload noplaybackrate" aria-label="தண்ணீர் இல்லாமல் கார் சுத்தம் செய்யும் முறை தமிழில் விளக்கம்" src="audio-tamil.m4a"></audio><small lang="ta">தமிழில் ஒலி விளக்கம், சுமார் 15 நிமிடம்</small></div>
-</section>
+
 
 <section class="glass story">
   <p class="tag">A real-life car story</p>
@@ -152,7 +161,7 @@ body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,
   <div class="pm-w"><small>WATER SAVED FOR THE SOCIETY</small><div class="pm-big">1,560 to 3,900 litres a year</div><div class="pm-eq">From just one WagonR.<br>Imagine 100 families like his: <b>1,56,000 to 3,90,000 litres</b> saved every year, about 7,800 to 19,500 cans of 20 L drinking water.</div></div>
   <div class="chips"><span class="chip">Richer paint colour</span><span class="chip">Better impression</span><span class="chip">Elegant look</span><span class="chip">Clearer glass</span><span class="chip">Less UV fade</span></div>
   <p class="fin">Today his WagonR looks excellent again. Your car could be the next success story, and your society's next water saver.</p>
-  <p class="fine">A customer's shared experience. Individual results may vary with the car's condition, usage and climate. Water figures are estimates based on 15 to 25 litres saved per clean, at 2 to 3 cleans a week. This product does not repair existing surface damage.</p>
+  <p class="fine">A customer's shared experience. Individual results may vary with the car's condition, usage and climate. Water figures are internal estimates based on 15 to 25 litres saved per clean, at 2 to 3 cleans a week. This product does not repair existing surface damage.</p>
 </section>
 
 <section class="glass pm" id="pm" data-z="0">
@@ -176,7 +185,7 @@ body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,
   <p class="pm-mot" id="pmMot"></p>
   <div class="pledge"><b>Count me in for water conservation</b><p>I am interested in committing to save water for my society.</p><p class="pb">In return, I get a free 500 ml trial worth &#8377;399: up to 30 cleans, and 15 to 25 litres of water saved with every clean.</p></div>
   <button type="button" class="pm-go" style="margin-top:10px" onclick="document.getElementById('f').scrollIntoView({behavior:'smooth'})">Yes, I need my free trial of 500 ml worth 399 INR</button>
-  <p class="pm-fine">Estimates only: based on 15 to 25 litres of water saved per clean and 1 can = 20 L of drinking water. Product per clean = 500 ml divided by number of cleans. Actual results vary with vehicle, surface, cloth and approach.</p>
+  <p class="pm-fine">Internal estimates only (not independently verified): based on 15 to 25 litres of water saved per clean and 1 can = 20 L of drinking water. Product per clean = 500 ml divided by number of cleans. Actual results vary with vehicle, surface, cloth and approach.</p>
   <div class="pm-sr" id="pmSr" aria-live="polite"></div>
 </section>
 
@@ -196,24 +205,31 @@ body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,
     <li><b>Your time is worth money too</b>Minutes instead of an hour at the wash bay, time you can give to family and work.</li>
   </ul>
   <div class="note"><b>A friendly note on its purpose</b><span>Our waterless cleaner solution is not a replacement for a pressure wash. It is designed for everyday upkeep: lifting light dust and grime, restoring shine between full washes, and cutting down the water you use. For heavy mud or deep-set dirt, a pressure wash remains the right method.</span></div>
-  <div class="dis" role="note"><i>i</i><div><b>Important Disclaimer</b><p>Surface damage that has already happened, such as fading, scratches or paint loss, cannot be recovered or repaired using this product. What it does is help prevent further deterioration. When the recommended process is followed, your car's surface is managed better than with conventional washing methods. Results depend on the condition of the surface.</p></div></div>
-  <div class="tip"><b>Recommended Advice</b><p><strong>Please keep clean cloths ready.</strong> For best results, use clean, stain-free cloths, at least 3 pieces, for cleaning. Fresh cloths lift dirt safely instead of dragging it across your paint.</p><p><strong>Do not directly spray on the vehicle surface.</strong> Spray on a clean and dry microfibre cloth for easy and better results, with cost saving on effective use.</p></div>
+  
+  <div class="tip"><b>Recommended Advice</b><p><strong>Please keep clean cloths ready.</strong> For best results, use clean, stain-free cloths, at least 3 pieces, for cleaning. Fresh cloths lift dirt safely instead of dragging it across your paint.</p><p><strong>Do not directly spray on the vehicle surface.</strong> Spray on a clean and dry microfibre cloth for easy and better results, with cost saving on effective use. Use about 25 ml or less per clean.</p></div>
   <p>Your bottle, worth &#8377;399, is our gift to you, absolutely free. Try it on your own car and judge for yourself. We are confident you will love it.</p>
   <div class="pledge"><b>Count me in for water conservation</b><p>I am interested in committing to save water for my society.</p><p class="pb">In return, I get a free 500 ml trial worth &#8377;399: up to 30 cleans, and 15 to 25 litres of water saved with every clean.</p></div>
   <button type="button" class="go" onclick="document.getElementById('f').scrollIntoView({behavior:'smooth'})">Yes, I need my free trial of 500 ml worth 399 INR</button>
 </section>
 
-</div><div class="colB">
-<div class="glass steps"><div class="st"><b>1</b>Fill in your details</div><div class="st"><b>2</b>Press Send on WhatsApp</div><div class="st"><b>3</b>Our team inspects &amp; validates, then you receive your free bottle</div></div>
+<section class="glass aud" id="aud">
+  <p class="aud-tag">Prefer to listen?</p>
+  <h2>Hear how waterless car cleaning works</h2>
+  <p class="aud-sub">Choose your language and press play. Listen while you are on the go, then register with confidence.</p>
+  <div class="au"><div class="au-h"><b>Waterless car cleaning explained</b><span class="lang">ENGLISH</span></div><audio controls preload="none" controlsList="nodownload noplaybackrate" aria-label="Waterless car cleaning explained in English" src="audio-english.m4a"></audio><small>Audio guide, about 18 minutes</small></div>
+  <div class="au"><div class="au-h"><b lang="ta">தண்ணீர் இல்லாமல் கார் சுத்தம் செய்யும் முறை</b><span class="lang" lang="ta">தமிழ்</span></div><audio controls preload="none" controlsList="nodownload noplaybackrate" aria-label="தண்ணீர் இல்லாமல் கார் சுத்தம் செய்யும் முறை தமிழில் விளக்கம்" src="audio-tamil.m4a"></audio><small lang="ta">தமிழில் ஒலி விளக்கம், சுமார் 15 நிமிடம்</small></div>
+</section>
+
 <section class="glass know">
   <h2>Good to know before you register</h2>
-  <h3>How to use: 3 simple steps</h3>
-  <ol><li>Spray about 25 ml or less on a clean, dry microfibre cloth. Never spray directly on the car.</li><li>Wipe gently with fresh, stain-free cloths. Keep at least 3 pieces ready.</li><li>Repeat these steps every time to move up the Usage Performance Meter.</li></ol>
   <h3>What happens next</h3>
   <p>Our team inspects and validates your details on WhatsApp, then your free bottle is dispatched to your doorstep. Delivery timing is confirmed with you on WhatsApp.</p>
   <h3>Need help? Reach us</h3>
   <p><b>OMNISPHERE ENTERPRISE</b><br>No 25, Plot No 4, Revathipuram 6th Street, Urappakkam,<br>Kancheepuram - 603202.<br>Ph / WhatsApp: <a href="tel:+917845387741">+91 - 7845387741</a></p>
 </section>
+</div><div class="colB">
+<div class="glass steps"><div class="st"><b>1</b>Fill in your details</div><div class="st"><b>2</b>Press Send on WhatsApp</div><div class="st"><b>3</b>Our team inspects &amp; validates, then you receive your free bottle</div></div>
+
 <form id="f" novalidate>
 <section class="glass">
   <h2><span class="stp">Step 1 of 3</span>Delivery details</h2><p class="hint">Where should we send your free bottle?</p>
@@ -275,9 +291,28 @@ body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,
   <h2><span class="stp">Step 3 of 3</span>Confirm &amp; send</h2>
   <label class="l" for="src">How did you hear about us?</label>
   <select class="inp" id="src"><option value="">Select</option><option>Instagram/Facebook</option><option>YouTube</option><option>WhatsApp Forward</option><option>Friend/Family</option><option>Other</option></select><div class="msg">Tell us how you heard about us.</div>
+  <div class="up" id="up">
+    <span class="up-badge">Recommended add-on</span>
+    <b class="up-t">Microfibre Towel, 350 GSM, 40 &times; 40 cm</b>
+    <p class="up-p">Plush, soft microfibre made for gentle wiping. Our Recommended Advice is to keep at least 3 clean cloths ready, so pair your free bottle with them.</p>
+    <div class="up-pr"><s>&#8377;125</s><strong>&#8377;75</strong><span>per piece, 40% off MRP</span></div>
+    <div class="up-q"><button type="button" class="up-b" id="upDn" aria-label="Remove one towel">&minus;</button><output id="upQ" aria-live="polite" aria-label="Towels selected">0</output><button type="button" class="up-b" id="upUp" aria-label="Add one towel">+</button><span class="up-m">Maximum 3 pieces</span></div>
+    <button type="button" class="up-all" id="upAll">Add 3 towels and save &#8377;150</button>
+    <div class="up-tot" id="upT"></div>
+    <p class="up-pay"><b>Payment for towels:</b> We will collect it through <strong>GPay to +91-9042020964</strong> or <strong>Cash on Delivery</strong>.</p>
+  </div>
   <div class="join"><b>Join our WhatsApp group (mandatory)</b><p>Tap the button, join the group, then tick the box below to unlock it. We share dispatch updates and car care tips there.</p><a id="gl" class="joinbtn" href="https://chat.whatsapp.com/HuQe6z7pfgk0KnJACVjzLx" target="_blank" rel="noopener">👉 Join our WhatsApp Group</a><label class="opt"><input type="checkbox" id="joined" disabled><span style="font-size:14px">I have joined the WhatsApp group</span></label><div class="msg" id="joinE">Please join the WhatsApp group and tick this box to continue.</div></div>
+  <div class="dis" role="note"><i>i</i><div><b>Important Disclaimer</b><ul>
+<li><strong>Existing damage:</strong> Surface damage that has already happened, such as fading, scratches or paint loss, cannot be recovered or repaired using this product. It helps prevent further deterioration, and when the recommended process is followed, your car's surface is managed better than with conventional washing methods.</li>
+<li><strong>Internal estimates:</strong> The water-saving figures and all other metrics on this page, including cleans per bottle, litres saved, product used per clean and cost savings, are internal estimates made by our team. They are not independently verified or certified. These figures may vary from case to case and are not a standard, as they depend on many factors (such as the car, surface, climate, usage and cloth) and on the method of analysis used for evaluation.</li>
+<li><strong>Data privacy:</strong> Your details are used only to verify your request, deliver your trial and add-on, and contact you about your order. We do not sell them. This page does not store your details; they reach us only through the WhatsApp message you send. Joining our WhatsApp group may show your number to other members, as per WhatsApp's own rules. To correct or delete your details, contact us on +91 - 7845387741.</li>
+<li><strong>Results vary:</strong> Results depend on the car, surface condition, climate, cloth used and how closely the recommended process is followed. Customer stories show individual experiences and are not a guarantee.</li>
+<li><strong>Safe use:</strong> Please test on a small, hidden area first and follow the usage instructions provided with the product.</li>
+<li><strong>Free trial terms:</strong> The free trial is limited to one 500 ml bottle per vehicle or household, and is subject to verification of your details and availability. We may modify or withdraw the offer.</li>
+<li><strong>Add-on:</strong> The microfibre towels are an optional add-on, payable separately.</li>
+</ul></div></div>
   <label class="opt" style="align-items:flex-start;margin-top:16px"><input type="checkbox" id="ok" style="margin-top:2px">
-    <span style="font-size:14px">I confirm this is my first trial request (limit 1 per vehicle/household) and agree to receive shipping updates via WhatsApp.</span></label>
+    <span style="font-size:14px">I confirm this is my first trial request (limit 1 per vehicle/household), I have read the disclaimer above, and I agree to receive shipping updates via WhatsApp.</span></label>
   <div class="msg" id="okE">Please confirm to continue.</div>
 </section>
 
@@ -315,6 +350,7 @@ function build(ref){
   const body=document.querySelector('input[name=body]:checked').value;
   const L='━━━━━━━━━━━━━━━━━━';
   const reg=fmtReg(regNorm());
+  const uq=+document.getElementById('upQ').textContent||0;
   return `🌿 *SATER WALT* 🌿
 *FREE TRIAL REGISTRATION*
 _Waterless Car Cleaner Solution (Worth ₹399, Absolutely Free)_
@@ -353,11 +389,20 @@ ${L}
 ▪️ *Challenges Faced:*
 ${pains.map(p=>'      ✔️ '+p).join('\n')}
 
-📣 *5. HEARD ABOUT US VIA*
+🧺 *5. ADD-ON ORDER*
+${uq?`▪️ *Item:* Microfibre Towel, 350 GSM, 40 x 40 cm
+▪️ *Quantity:* ${uq} pcs
+▪️ *Price:* ₹75 per piece (MRP ₹125)
+▪️ *Add-on Total:* ₹${uq*75}
+▪️ *You Save:* ₹${uq*50}
+▪️ *Payment:* Collected via GPay to +91-9042020964 or Cash on Delivery`:'▪️ No add-on selected'}
+
+📣 *6. HEARD ABOUT US VIA*
 ▪️ ${val('src')}
 
-✅ *6. DECLARATION*
+✅ *7. DECLARATION*
 ✔️ First trial request (limit 1 per vehicle/household)
+✔️ Read and accepted the disclaimer
 ✔️ Agree to receive shipping updates on WhatsApp
 ✔️ Joined the official Sater Walt WhatsApp group
 ${L}
@@ -408,6 +453,12 @@ s.addEventListener('input',upd);
 q('pmDn').addEventListener('click',()=>{s.stepDown();upd()});q('pmUp').addEventListener('click',()=>{s.stepUp();upd()});
 q('pmCh').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{s.value=b.dataset.v;upd()}));
 upd();})();
+(()=>{const g=id=>document.getElementById(id),q=g('upQ'),T=g('upT'),dn=g('upDn'),upb=g('upUp'),all=g('upAll');let n=0;
+const set=v=>{n=Math.max(0,Math.min(3,v));q.textContent=n;dn.disabled=n===0;upb.disabled=n===3;all.hidden=n===3;
+T.innerHTML=n?`<b>Add-on total: &#8377;${n*75}</b> (${n} &times; &#8377;75)<br>You save &#8377;${n*50} against MRP &#8377;${n*125}.<br>Your 500 ml trial stays absolutely free.`:'Optional. Nothing added yet. Your 500 ml trial is free either way.'};
+dn.addEventListener('click',()=>set(n-1));upb.addEventListener('click',()=>set(n+1));all.addEventListener('click',()=>set(3));set(0)})();
+document.querySelectorAll('.hl button').forEach(b=>b.addEventListener('click',()=>document.getElementById('aud').scrollIntoView({behavior:'smooth'})));
+(()=>{const sync=()=>document.querySelectorAll('.opt').forEach(o=>{const i=o.querySelector('input');if(i){o.classList.toggle('on',i.checked);o.classList.toggle('off',i.disabled)}});document.addEventListener('change',sync);document.getElementById('gl').addEventListener('click',()=>setTimeout(sync));sync()})();
 if('IntersectionObserver' in window){new IntersectionObserver(es=>$('stick').classList.toggle('on',!es[0].isIntersecting),{threshold:.05}).observe($('f'))}
 $('f').addEventListener('submit',e=>{
   e.preventDefault();
